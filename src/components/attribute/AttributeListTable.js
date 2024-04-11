@@ -68,12 +68,12 @@ const AttributeListTable = ({
                     {variantTitle
                       ?.map((att) => {
                         const attributeData = att?.variants?.filter(
-                          (val) => val?.name[lang] !== "All"
+                          (val) => val?.name.en !== "All"
                         );
 
                         const attributeName = attributeData?.find(
                           (v) => v._id === variant[att?._id]
-                        )?.name[lang];
+                        )?.name.en;
                         if (attributeName === undefined) {
                           return attributeName?.en;
                         } else {

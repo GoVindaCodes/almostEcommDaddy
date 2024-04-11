@@ -68,7 +68,7 @@ const StaffTable = ({ staffs, lang }) => {
                 />
                 <div>
                   <h2 className="text-sm font-medium">
-                    {showingTranslateValue(staff?.name[lang], lang)}
+                    {showingTranslateValue(staff?.name.en, lang)}
                   </h2>
                 </div>
               </div>
@@ -115,8 +115,8 @@ const StaffTable = ({ staffs, lang }) => {
                 handleUpdate={handleUpdate}
                 handleModalOpen={handleModalOpen}
                 handleResetPassword={handleResetPassword}
-                title={staff.name}
-              // title={showingTranslateValue(staff?.name, lang)}
+                // title={staff.name}
+                title={showingTranslateValue(staff?.name.en, lang)}
               />
             </TableCell>
           </TableRow>

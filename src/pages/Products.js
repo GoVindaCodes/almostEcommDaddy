@@ -84,11 +84,12 @@ const Products = () => {
   const handleSelectAll = () => {
     setIsCheckAll(!isCheckAll);
     setIsCheck((data?.products.map((li) => li._id)));
-    //console.log("IDs being set in setIsCheck:", data?.products.map((li) => li._id));
+    // console.log("IDs being set in setIsCheck:", data?.products.map((li) => li._id));
 
     if (isCheckAll) {
       setIsCheck([]);
     }
+    // console.log("ids : ", setIsCheck)
   };
   const [categories, setCategories] = useState([]);
 

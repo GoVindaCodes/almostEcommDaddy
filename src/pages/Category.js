@@ -246,7 +246,7 @@ const Category = () => {
                 </TableHeader>
 
                 <CategoryTable
-                  data={categories}
+                  data={data}
                   lang={lang}
                   isCheck={isCheck}
                   categories={categories}

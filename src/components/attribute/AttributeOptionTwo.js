@@ -27,7 +27,7 @@ const AttributeOptionTwo = ({
     const options = attributes?.variants?.map((val) => {
       return {
         ...val,
-        label: showingTranslateValue(val?.name[lang], lang),
+        label: showingTranslateValue(val?.name.en, lang),
         value: val?._id,
       };
     });

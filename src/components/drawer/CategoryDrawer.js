@@ -93,7 +93,7 @@ const CategoryDrawer = ({ id, data, lang }) => {
           }));
         }
         myCategories.push({
-          title: showingTranslateValue(category?.name, lang),
+          title: showingTranslateValue(category?.parentName, lang),
           key: category._id,
           children: children,
         });
@@ -149,7 +149,7 @@ const CategoryDrawer = ({ id, data, lang }) => {
         const obj = data[0];
         const result = findObject(obj, key);
 
-        setSelectCategoryName(showingTranslateValue(result?.name, lang));
+        setSelectCategoryName(showingTranslateValue(result?.parentName, lang));
       }
     } else {
       if (key === undefined) return;
@@ -158,7 +158,7 @@ const CategoryDrawer = ({ id, data, lang }) => {
       const obj = data[0];
       const result = findObject(obj, key);
 
-      setSelectCategoryName(showingTranslateValue(result?.name, lang));
+      setSelectCategoryName(showingTranslateValue(result?.parentName, lang));
     }
   };
 

@@ -120,7 +120,7 @@ const CouponTable = ({ lang, isCheck, setIsCheck }) => {
                 )}
                 <div>
                   <span className="text-sm">
-                    {showingTranslateValue(coupon?.title[lang], lang)}
+                    {showingTranslateValue(coupon?.title.en, lang)}
                     {/* {coupon?.title[lang]} */}
                   </span>{" "}
                 </div>

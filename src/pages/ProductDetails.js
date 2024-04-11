@@ -70,12 +70,17 @@ const ProductDetails = () => {
         <div className="inline-block overflow-y-auto h-full align-middle transition-all transform">
           <div className="flex flex-col lg:flex-row md:flex-row w-full overflow-hidden">
             <div className="flex-shrink-0 flex items-center justify-center h-auto">
-              {data?.image[0] ? (
-                <img src={data?.image[0]} alt="product" className="h-64 w-64" />
+              {data && data.image && data.image.length > 0 ? (
+                <div className="flex">
+                  {data.image.map((image, index) => (
+                    <img key={index} src={image} alt={`product-${index}`} className="h-64 w-64 mr-2" />
+                  ))}
+                </div>
               ) : (
                 <img
                   src="https://res.cloudinary.com/ahossain/image/upload/v1655097002/placeholder_kvepfp.png"
                   alt="product"
+                  className="h-64 w-64"
                 />
               )}
             </div>

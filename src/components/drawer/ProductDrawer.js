@@ -401,7 +401,7 @@ const ProductDrawer = ({ id, currency }) => {
                     <div key={attribute._id}>
                       <div className="flex w-full h-10 justify-between font-sans rounded-tl rounded-tr bg-gray-200 px-4 py-3 text-left text-sm font-normal text-gray-700 hover:bg-gray-200 focus:outline-none focus-visible:ring focus-visible:ring-purple-500 focus-visible:ring-opacity-75">
                         {"Select"}
-                        {showingTranslateValue(attribute?.title, language)}
+                        {showingTranslateValue(attribute?.title.en, language)}
                       </div>
 
                       <AttributeOptionTwo
